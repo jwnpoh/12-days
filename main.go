@@ -8,7 +8,7 @@ import (
 )
 
 // If no arguments given.
-const usage = "How many days of Christmas is your true love gifting you gifts on?"
+const usage = "How many days of Christmas is your true love gifting you gifts for?"
 
 func main() {
 
