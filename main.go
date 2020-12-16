@@ -3,8 +3,8 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	//"os"
-	//"strconv"
 )
 
 const usage = "How many days of Christmas is your true love gifting you gifts for?"
@@ -30,18 +30,21 @@ func main() {
 		}
 	*/
 
-	// get number of days with interactive prompt (os and strconv not required)
-	var d int
+	// get number of days with user input with fmt.Scan
+	var u string
 
 	fmt.Println(usage)
-	fmt.Scan(&d)
+	fmt.Scan(&u)
 
-	var sum, total int
+	// make sure that only integers input
+	d, err := strconv.Atoi(u)
 
-	if d < 0 {
+	if d < 0 || err != nil {
 		fmt.Println("This makes no sense.")
 		return
 	}
+
+	var sum, total int
 
 	for i := 1; i <= d; i++ {
 		sum += i
