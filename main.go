@@ -38,6 +38,11 @@ func main() {
 
 	var sum, total int
 
+	if d < 0 {
+		fmt.Println("This makes no sense.")
+		return
+	}
+
 	for i := 1; i <= d; i++ {
 		sum += i
 		total += sum
