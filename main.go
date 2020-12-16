@@ -7,7 +7,6 @@ import (
 	//"strconv"
 )
 
-// If no arguments given.
 const usage = "How many days of Christmas is your true love gifting you gifts for?"
 
 func main() {
@@ -15,6 +14,7 @@ func main() {
 	// get number of days from command line arguments (os and strconv required)
 	/*	arg := os.Args
 
+			// If no arguments given.
 			if len(arg) != 2 {
 				fmt.Println(usage)
 				return
