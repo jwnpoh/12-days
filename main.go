@@ -3,28 +3,38 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
+	//"os"
+	//"strconv"
 )
 
 // If no arguments given.
 const usage = "How many days of Christmas is your true love gifting you gifts on?"
 
 func main() {
-	arg := os.Args
 
-	if len(arg) != 2 {
-		fmt.Println(usage)
-		return
-	}
+	// get number of days from command line arguments (os and strconv required)
+	/*	arg := os.Args
 
-	// get number of days
-	d, err := strconv.Atoi(arg[1])
+			if len(arg) != 2 {
+				fmt.Println(usage)
+				return
+			}
 
-	if err != nil {
-		fmt.Println(usage + " (in numbers)")
-		return
-	}
+			// get number of days
+			d, err := strconv.Atoi(arg[1])
+
+
+		if err != nil {
+			fmt.Println(usage + " (in numbers)")
+			return
+		}
+	*/
+
+	// get number of days with interactive prompt (os and strconv not required)
+	var d int
+
+	fmt.Println(usage)
+	fmt.Scan(&d)
 
 	var sum, total int
 
