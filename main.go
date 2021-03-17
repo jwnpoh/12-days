@@ -37,16 +37,16 @@ func main() {
 	fmt.Scan(&u)
 
 	// make sure that only integers input
-	d, err := strconv.Atoi(u)
+	d, err := strconv.ParseUint(u, 10, 64)
 
 	if d < 0 || err != nil {
 		fmt.Println("This makes no sense.")
 		return
 	}
 
-	var sum, total int
+	var sum, total uint64
 
-	for i := 1; i <= d; i++ {
+	for i := uint64(1); i <= d; i++ {
 		sum += i
 		total += sum
 	}
